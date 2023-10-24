@@ -78,11 +78,11 @@ if (process.env.NODE_ENV === "production") {
     res.send("API is running....");
   });
 }
-app.use(
-  "/",
-  createProxyMiddleware({
-    target: "https://socialmern-ou1t.onrender.com",
-    changeOrigin: true,
-  })
-);
+// app.use(
+//   "/",
+//   createProxyMiddleware({
+//     target: "https://socialmern-ou1t.onrender.com",
+//     changeOrigin: true,
+//   })
+// );
 app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
