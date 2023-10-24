@@ -14,6 +14,7 @@ import postRoutes from "./routes/posts.js";
 import { register } from "./controllers/auth.js";
 import { createPost } from "./controllers/posts.js";
 import { verifyToken } from "./middleware/auth.js";
+const { createProxyMiddleware } = require("http-proxy-middleware");
 import User from "./models/User.js";
 import Post from "./models/Post.js";
 import { users, posts } from "./data/index.js";
@@ -77,5 +78,11 @@ if (process.env.NODE_ENV === "production") {
     res.send("API is running....");
   });
 }
-
+app.use(
+  "/",
+  createProxyMiddleware({
+    target: "https://socialmern-ou1t.onrender.com",
+    changeOrigin: true,
+  })
+);
 app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
