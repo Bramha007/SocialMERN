@@ -28,7 +28,7 @@
     "server": "nodemon server/index.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run client\" \"npm run server\"",
-    "build": "npm install && npm install --prefix client && npm run build --prefix client",
+    "build": "npm install --prefix client && npm run build --prefix client && npm install",
     "build:deploy": "npm run build && npm run start"
   },
   "keywords": [],
