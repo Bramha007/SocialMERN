@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple socialmedia website built using MERN Stack Technologies",
   "main": "index.js",
   "type": "module",
   "dependencies": {
@@ -23,6 +23,10 @@
     "concurrently": "^8.2.1",
     "nodemon": "^3.0.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bramha007/SocialMERN.git"
+  },
   "scripts": {
     "start": "node server/index.js",
     "server": "nodemon server/index.js",
@@ -33,5 +37,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bramha007/SocialMERN/issues"
+  }
 }
